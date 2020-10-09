@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        .wrapper{
+            height: 100%;
+            width: 100%;
+
+            background: silver;
+
+            display: flex;
+        }
+        .left{
+            width: 100px;
+            background: red;
+        }
+        .right{
+            background: salmon;
+            /* flex: 1; */
+            /* flex-grow: 1; */
+            /* flex: auto; 等价于 1 1 auto  */
+            flex: 1 1 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>

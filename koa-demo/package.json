@@ -1,0 +1,33 @@
+{
+  "name": "koa-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "if [ -d ./dist ]; then rm -rf dist; fi && babel src -d dist",
+    "dev": " NODE_ENV='dev' nodemon ./src/index.js --exec 'babel-node'"
+  },
+  "dependencies": {
+    "async-validator": "^3.3.0",
+    "babel-cli": "^6.26.0",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.11.0",
+    "koa-better-http-proxy": "^0.2.4",
+    "koa-body": "^4.1.1",
+    "koa-jwt": "^4.0.0",
+    "koa-mount": "^4.0.0",
+    "koa-onerror": "^4.1.0",
+    "koa-router": "^8.0.8",
+    "koa-static": "^5.0.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.7"
+  },
+  "devDependencies": {
+    "babel-plugin-dynamic-import-node": "^2.3.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^2.0.3"
+  }
+}

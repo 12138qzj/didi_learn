@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式布局</title>
+</head>
+<body>
+    <!-- 发布者订阅模式 -->
+    <script>
+        function sub(){
+            // constructor (){
+            //     super();
+            // }
+            this.listeners={};
+            this.emit=()=>{
+
+                for(let item in this.listeners){
+                    this.listeners[item].forEach(item=>{
+                    this.listeners[name].filter(item=>{
+                        itme();
+                    });
+                })
+                }
+                this.listeners.forEach(item=>{
+                    console.log(item,index)
+                    this.listeners[name].filter(item=>{
+                        itme();
+                    });
+                })
+            }
+             this.on=(name,func)=>{
+                if(!this.listeners[name]){
+                    this.listeners[name]=[]
+                }
+                this.listeners[name].push(func);
+
+            }
+            function off(name){
+                if(!this.listeners[name]){
+                    console.log("该用户不存在")
+                    return;
+                }
+                delete this.listeners[name]
+            }
+        }
+        var s1=new sub();
+        s1.on("request1",function(){
+            console.log("修改了还给我发的信息1")
+        })
+        s1.on("request2",function(){
+            console.log("修改了还给我发的信息2")
+        })
+        
+    </script>
+</body>
+</html>

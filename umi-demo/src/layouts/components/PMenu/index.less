@@ -1,0 +1,28 @@
+@footerPublic:{
+    position: fixed;
+    bottom: 0;
+    background: red;
+    height: 29px;
+
+    display: flex;
+    align-items: center
+}
+.siderWrapper{
+    height: 100vh;
+    overflow: auto;
+    
+    .footer{
+        
+        @footerPublic();
+        width: 180px;
+        padding: 4px;
+
+        justify-content: space-around;
+    }
+    .footer1{
+        @footerPublic();
+        width: 80px;
+
+        justify-content: center;
+    }
+}
